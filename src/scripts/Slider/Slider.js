@@ -42,7 +42,8 @@ export default class Slider {
         }
         this._intervalID = setTimeout(() => {
             const value = this._input.getObject().value;
-            if (this._isNumber(value)) {
+            const floatNumber = parseFloat(value);
+            if (this._isNumber(value) && floatNumber >= this._minValue && floatNumber <= this._maxValue) {
                 this._currentValue = this._input.getObject().value;
                 this._updateView();
                 this.updateBullet();
