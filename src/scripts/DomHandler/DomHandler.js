@@ -1,6 +1,12 @@
+/**
+ * DOM Handler
+ * It's in charge of handling DOM objects
+ * @author artur.magalhaes
+ */
 export default class DomHandler {
     /**
-     *
+     * Constructor
+     * Could be a other reference from a DOM Handler or null (document)
      * @param object
      */
     constructor(object) {
@@ -8,7 +14,7 @@ export default class DomHandler {
     }
 
     /**
-     *
+     * Find the element based on selector .class #id tagname
      * @param element
      * @returns {Element}
      */
@@ -35,6 +41,10 @@ export default class DomHandler {
         return new DomHandler(_element);
     }
 
+    /**
+     * Returns the main object
+     * @returns {Document | *}
+     */
     getObject () {
         return this.object;
     }
