@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mortgage Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <h2 class="head-title">Mortgage Calculator</h2>
+    <form name="mortgage-calculator" id="form" class="box-container">
+      <div class="col-left">
+        <h3>Change values to calculate your results</h3>
+        <div class="slider" id="years-mortgage">
+          <label class="label-item">Years of mortgage</label>
+          <div class="slider-bullet">
+            <span class="min-value"></span>
+            <div class="bar">
+              <div class="bullet"></div>
+              <div class="bar-total"></div>
+              <div class="bar-background"></div>
+            </div>
+            <span class="max-value"></span>
+          </div>
+          <input type="tel" value="" maxlength="2" class="input input-value" />
+        </div>
+
+        <div class="slider" id="rate-interest">
+          <label class="label-item">Rate of interest (%)</label>
+          <div class="slider-bullet">
+            <span class="min-value"></span>
+            <div class="bar">
+              <div class="bullet"></div>
+              <div class="bar-total"></div>
+              <div class="bar-background"></div>
+            </div>
+            <span class="max-value"></span>
+          </div>
+          <input type="tel" maxlength="3" class="input input-value" />
+        </div>
+
+        <div class="loan currency mb-25">
+          <label>Loan amount</label>
+          <div class="input-group">
+            <label class="input-prefix" for="loan">$</label>
+            <input name="loan" id="loan" type="tel" class="input input-currency" />
+            <label class="input-error"></label>
+          </div>
+        </div>
+
+        <div class="annual-tax currency float-left">
+          <label>Annual Tax</label>
+          <div class="input-group">
+            <label class="input-prefix" for="annual-tax">$</label>
+            <input name="annual-tax" id="annual-tax" type="tel" class="input input-currency" />
+            <label class="input-error"></label>
+          </div>
+        </div>
+
+        <div class="annual-insure currency float-right">
+          <label>Annual Insure</label>
+          <div class="input-group">
+            <label class="input-prefix" for="annual-insure">$</label>
+            <input name="annual-insure" id="annual-insure" type="tel" class="input input-currency" />
+            <label class="input-error"></label>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <button type="submit" id="submit-button" class="btn btn-block">Calculate</button>
+      </div>
+      <div class="col-right" id="results">
+        <h2>Your results</h2>
+        <div class="summary">
+          <ul class="summary-items">
+            <li class="title">Principle & Interest</li>
+            <li class="description" id="summary-principle">$ - -</li>
+          </ul>
+          <ul class="summary-items">
+            <li class="title">Tax</li>
+            <li class="description" id="summary-tax">$ - -</li>
+          </ul>
+          <ul class="summary-items">
+            <li class="title">Insurance</li>
+            <li class="description" id="summary-insurance">$ - -</li>
+          </ul>
+          <ul class="summary-items summary-total">
+            <li class="title">Total Monthly Payment</li>
+            <li class="description" id="summary-total">$ - -</li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix">
+      </div>
+    </form>
+
+  </div>
+</body>
+</html>

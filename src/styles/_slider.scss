@@ -1,0 +1,59 @@
+.slider {
+  margin-bottom: 25px;
+  .label-item {
+    display: block;
+  }
+  .min-value, .max-value {
+    font-family: $default-font;
+    color: $black;
+    width: 28px;
+  }
+  .min-value {
+    float: left;
+  }
+  .max-value {
+    float: right;
+  }
+  .slider-bullet {
+    display: inline-block;
+    width: calc(100% - 60px);
+    padding-right: 15px;
+    margin-top: 20px;
+  }
+  .input-value {
+    width: 60px;
+    height: 45px;
+    float: right;
+    text-align: center;
+  }
+  .bar {
+    width: calc(100% - 56px);
+    position: relative;
+    float: left;
+    .bar-total, .bar-background {
+      height: 8px;
+      border-radius: 100px;
+      position: absolute;
+    }
+    .bar-background {
+      background: $soft-gray;
+      width: calc(100% - 10px);
+
+    }
+    .bar-total {
+      background: $light-blue;
+      z-index: 3;
+    }
+    .bullet {
+      width: 24px;
+      height: 24px;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.27);
+      background-color: #ffffff;
+      border-radius: 24px;
+      position: absolute;
+      margin-top: -8px;
+      margin-left: -10px;
+      z-index: 4;
+    }
+  }
+}
