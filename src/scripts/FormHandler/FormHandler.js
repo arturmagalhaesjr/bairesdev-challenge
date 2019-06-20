@@ -42,15 +42,13 @@ export default class FormHandler {
             const input = dom.find(item.id);
             const value = input.getObject().value;
             const errorLabel = input.getObject().parentNode.getElementsByClassName('input-error')[0];
+            input.getObject().className = input.getObject().className.replace(/error/, '');
+            errorLabel.innerHTML = '';
             if (value.length === 0 || !value.match(/^[0-9]+$/)) {
                 input.getObject().className += ' error';
                 // sets the label error according to device
                 errorLabel.innerHTML = Utils.isMobile() ? item.mobileMessage : item.desktopMessage;
                 isValid = false;
-            } else {
-                // removes the CSS classes in DOM
-                input.getObject().className = input.getObject().className.replace(/error/, '');
-                errorLabel.innerHTML = '';
             }
         });
 
